@@ -34,7 +34,7 @@ export const RoundToolbar = ({ children, initialDegree, openDegree, radius, open
             })}
 
             <button
-                className={classNames(toolsClassname)}
+                className={classNames(isOpen ? '' : styles.waveAnimation, toolsClassname)}
                 onClick={() => {
                     toggleToolbar();
                     setDisabled();

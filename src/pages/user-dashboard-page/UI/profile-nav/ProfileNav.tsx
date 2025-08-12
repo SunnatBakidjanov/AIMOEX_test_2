@@ -12,7 +12,7 @@ export default function ProfileNav() {
     ];
 
     return (
-        <nav className="flex gap-2 sm:gap-4 flex-wrap bg-white p-3 rounded-xl shadow-sm border border-gray-200">
+        <nav className="flex gap-2 sm:gap-4 flex-wrap bg-white p-3 rounded-xl shadow-sm shadow-gray-200">
             {links.map(link => (
                 <button key={link.path} onClick={() => navigate(link.path)} className="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">
                     {link.label}
