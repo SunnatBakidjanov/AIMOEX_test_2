@@ -8,5 +8,13 @@
         },
         "status": "Status: <0>{{userStatus}}</0>",
         "lastLogin": "Last login: <0>{{userLastLoginDate}}</0>"
+    },
+    "profileNav": {
+        "title": "Profile navigation",
+        "profile": "Profile",
+        "lastTests": "Last tests",
+        "results": "Results",
+        "balansTarif": "Balance / My tariff",
+        "achievements": "Achievements"
     }
 }

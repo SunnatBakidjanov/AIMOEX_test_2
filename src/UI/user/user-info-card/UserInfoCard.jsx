@@ -11,8 +11,10 @@ export const UserInfoCard = ({ user }) => {
     const { t } = useTranslation('userDashboard');
 
     const userStatusText = user.status === 'active' ? t('userInfoCard.userStatus.active') : user.status === 'blocked' ? t('userInfoCard.userStatus.blocked') : t('userInfoCard.userStatus.inactive');
-    const userStatusColor = user.status === 'active' ? '--success-color' : user.status === 'blocked' ? '--error-color' : '--warning-color';
+    const userStatusColor = user.status === 'active' ? 'var(--success-color)' : user.status === 'blocked' ? 'var(--error-color)' : 'var(--warning-color)';
     const currentDateLang = i18n.language === 'ru' ? ru : enUS;
+
+    console.log(userStatusColor);
 
     return (
         <section className="flex items-center gap-4 p-4 bg-[var(--primary-transparent)] rounded-xl shadow-md transition-colors duration-400">
@@ -28,7 +30,15 @@ export const UserInfoCard = ({ user }) => {
                 </h2>
 
                 <p className="text-[0.95rem] text-[var(--primary-color)] transition-colors duration-400">
-                    <Trans i18nKey="userDashboard:userInfoCard.status" values={{ userStatus: userStatusText }} components={[<span className={classNames(`text-[var(${userStatusColor})] font-bold tracking-[0.2px] ml-1`)} />]} />
+                    <Trans
+                        i18nKey="userDashboard:userInfoCard.status"
+                        values={{ userStatus: userStatusText }}
+                        components={[
+                            <span style={{ color: userStatusColor }} className="font-bold tracking-[0.2px] ml-1">
+                                {userStatusText}
+                            </span>,
+                        ]}
+                    />
                 </p>
 
                 <p className="text-[0.95rem] text-[var(--primary-color)] transition-colors duration-400">

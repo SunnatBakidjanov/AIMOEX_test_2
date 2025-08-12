@@ -8,5 +8,13 @@
         },
         "status": "Статус: <0>{{userStatus}}</0>",
         "lastLogin": "Последний вход: <0>{{userLastLoginDate}}</0>"
+    },
+    "profileNav": {
+        "title": "Навигация профиля",
+        "profile": "Профиль",
+        "lastTests": "Последние тесты",
+        "results": "Результаты",
+        "balansTarif": "Баланс / Мой тариф",
+        "achievements": "Достижения"
     }
 }
