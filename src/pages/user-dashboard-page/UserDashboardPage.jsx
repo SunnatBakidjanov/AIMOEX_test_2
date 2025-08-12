@@ -4,6 +4,7 @@ import { PageContainer } from '../../UI/containers/page-container/PageContainer'
 import { UserInfoCard } from '../../UI/user/user-info-card/UserInfoCard';
 import { user, stats, recentResults } from '../../mocks/mocks';
 import ProfileNav from './UI/profile-nav/ProfileNav';
+import { ProfileStats } from './UI/profile-stats/ProfileStats';
 import { RoundToolbarUserDashboard } from './UI/round-toolbar/RoundToolbarUserDashboard';
 
 export const UserDashboardPage = () => {
@@ -15,17 +16,7 @@ export const UserDashboardPage = () => {
 
                     <ProfileNav />
 
-                    {/* Прогресс */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="bg-white rounded-xl shadow p-4 text-center">
-                            <p className="text-gray-500 text-sm">Пройдено тестов</p>
-                            <p className="text-3xl font-semibold">{stats.testsTaken}</p>
-                        </div>
-                        <div className="bg-white rounded-xl shadow p-4 text-center">
-                            <p className="text-gray-500 text-sm">Средний балл</p>
-                            <p className="text-3xl font-semibold">{stats.averageScore}%</p>
-                        </div>
-                    </div>
+                    <ProfileStats stats={stats} />
 
                     {/* Последние результаты */}
                     <div className="bg-white rounded-xl shadow p-4">

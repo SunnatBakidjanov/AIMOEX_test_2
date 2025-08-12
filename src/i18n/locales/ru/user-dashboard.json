@@ -16,5 +16,10 @@
         "results": "Результаты",
         "balansTarif": "Баланс / Мой тариф",
         "achievements": "Достижения"
+    },
+    "profileStats": {
+        "title": "Cтатистика",
+        "testPassed": "Пройдено тестов",
+        "averageScore": "Средний балл"
     }
 }

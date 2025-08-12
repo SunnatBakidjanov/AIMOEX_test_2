@@ -1,32 +1,26 @@
 import classNames from 'classnames/bind';
 import { Trans, useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 
 import { formatDistanceToNow } from 'date-fns';
 import { ru, enUS } from 'date-fns/locale';
 import i18n from '../../../i18n/i18n';
 
 export const UserInfoCard = ({ user }) => {
-    const randomColor = useSelector(state => state.theme.currentColor);
     const { t } = useTranslation('userDashboard');
 
     const userStatusText = user.status === 'active' ? t('userInfoCard.userStatus.active') : user.status === 'blocked' ? t('userInfoCard.userStatus.blocked') : t('userInfoCard.userStatus.inactive');
     const userStatusColor = user.status === 'active' ? 'var(--success-color)' : user.status === 'blocked' ? 'var(--error-color)' : 'var(--warning-color)';
     const currentDateLang = i18n.language === 'ru' ? ru : enUS;
 
-    console.log(userStatusColor);
-
     return (
         <section className="flex items-center gap-4 p-4 bg-[var(--primary-transparent)] rounded-xl shadow-md transition-colors duration-400">
             {/* Avatar */}
-            <div className={classNames('w-20 h-20 text-[var(--same-white-color)] rounded-full flex items-center justify-center text-[1.75rem] font-bold')} style={{ backgroundColor: randomColor }}>
-                {user.name.charAt(0)}
-            </div>
+            <div className={classNames('w-20 h-20 text-[var(--same-white-color)] bg-[var(--accent-color)] rounded-full flex items-center transition-colors duration-400 justify-center text-[1.75rem] font-bold')}>{user.name.charAt(0)}</div>
 
             {/* Info */}
             <div>
                 <h2 className="text-[1.5rem] font-bold text-[var(--primary-color)] transition-colors duration-400">
-                    <Trans i18nKey="userDashboard:userInfoCard.user" values={{ userName: user.name }} components={[<span style={{ color: randomColor }} />]} />
+                    <Trans i18nKey="userDashboard:userInfoCard.user" values={{ userName: user.name }} components={[<span className="text-[var(--accent-color)] transition-colors duration-400" />]} />
                 </h2>
 
                 <p className="text-[0.95rem] text-[var(--primary-color)] transition-colors duration-400">
@@ -51,7 +45,7 @@ export const UserInfoCard = ({ user }) => {
                                 locale: currentDateLang,
                             }),
                         }}
-                        components={[<span className="font-bold ml-1" style={{ color: randomColor }} />]}
+                        components={[<span className="font-bold ml-1 text-[var(--accent-color)] transition-colors duration-400" />]}
                     />
                 </p>
             </div>

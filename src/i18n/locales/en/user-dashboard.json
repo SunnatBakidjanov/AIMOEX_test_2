@@ -16,5 +16,10 @@
         "results": "Results",
         "balansTarif": "Balance / My tariff",
         "achievements": "Achievements"
+    },
+    "profileStats": {
+        "title": "Statistics",
+        "testPassed": "Tests passed",
+        "averageScore": "Average score"
     }
 }

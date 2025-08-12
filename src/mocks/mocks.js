@@ -9,6 +9,7 @@ export const user = {
 
 export const stats = {
     testsTaken: 42,
+    totalTests: 150,
     averageScore: 78.6,
     rank: 24,
 };
