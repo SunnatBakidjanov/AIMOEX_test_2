@@ -7,12 +7,22 @@ import ProfileNav from './UI/profile-nav/ProfileNav';
 import { ProfileStats } from './UI/profile-stats/ProfileStats';
 import { RecentResults } from './UI/recent-results/RecentResults';
 import { RoundToolbarUserDashboard } from './UI/round-toolbar/RoundToolbarUserDashboard';
+import { Title } from './UI/title/Title';
 
 export const UserDashboardPage = () => {
     return (
         <PageContainer className={'min-h-screen w-full bg-[var(--primary-reverse-color)] transition-colors duration-400'}>
             <MainContainer className={'relative z-[var(--main-content-z-index)]'}>
-                <main className="flex flex-col gap-y-4 pt-6">
+                <main
+                    className="
+                        flex flex-col
+                        gap-y-2 sm:gap-y-4
+                        pt-4 sm:pt-6
+                        pb-8 sm:pb-10 md:pb-12 lg:pb-14
+                    "
+                >
+                    <Title />
+
                     <UserInfoCard user={user} />
 
                     <ProfileNav />

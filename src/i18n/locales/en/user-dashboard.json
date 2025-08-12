@@ -1,4 +1,5 @@
 {
+    "title": "User dashboard",
     "userInfoCard": {
         "user": "Hi, <0>{{userName}}</0>",
         "userStatus": {
@@ -21,5 +22,8 @@
         "title": "Statistics",
         "testPassed": "Tests passed",
         "averageScore": "Average score"
+    },
+    "recentResults": {
+        "title": "Recent results"
     }
 }

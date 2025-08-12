@@ -1,4 +1,3 @@
-import classNames from 'classnames/bind';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { formatDistanceToNow } from 'date-fns';
@@ -13,17 +12,56 @@ export const UserInfoCard = ({ user }) => {
     const currentDateLang = i18n.language === 'ru' ? ru : enUS;
 
     return (
-        <section className="flex items-center gap-4 p-4 bg-[var(--primary-transparent)] rounded-xl shadow-md transition-colors duration-400">
+        <section
+            className="
+                bg-[var(--primary-transparent)] rounded-xl transition-colors duration-400
+                flex flex-col items-center justify-center
+                sm:flex-row sm:justify-start
+                gap-5 sm:gap-4
+                p-4
+            "
+        >
             {/* Avatar */}
-            <div className={classNames('w-20 h-20 text-[var(--same-white-color)] bg-[var(--accent-color)] rounded-full flex items-center transition-colors duration-400 justify-center text-[1.75rem] font-bold')}>{user.name.charAt(0)}</div>
+            <div
+                className="
+                    text-[var(--same-white-color)] bg-[var(--accent-color)] rounded-full flex items-center transition-colors duration-400 justify-center font-bold
+                    text-4xl sm:text-3xl
+                    w-22 h-22
+                    sm:w-20 sm:h-20
+                "
+            >
+                {user.name.charAt(0)}
+            </div>
 
             {/* Info */}
-            <div>
-                <h2 className="text-[1.5rem] font-bold text-[var(--primary-color)] transition-colors duration-400">
+            <div
+                className="
+                    flex 
+                    flex-col items-center
+                    sm:items-start
+                    gap-y-0.5 sm:gap-y-0
+                "
+            >
+                <h2
+                    className="
+                        font-bold text-[var(--primary-color)] transition-colors duration-400
+                        text-3xl sm:text-2xl
+                        w-full sm:w-auto
+                        text-center sm:text-left
+                        pb-1.5 sm:pb-0
+                        mb-3 sm:mb-0
+                        border-b-2 sm:border-b-0 border-[var(--accent-color)]
+                    "
+                >
                     <Trans i18nKey="userDashboard:userInfoCard.user" values={{ userName: user.name }} components={[<span className="text-[var(--accent-color)] transition-colors duration-400" />]} />
                 </h2>
 
-                <p className="text-[0.95rem] text-[var(--primary-color)] transition-colors duration-400">
+                <p
+                    className="
+                        text-[var(--primary-color)] transition-colors duration-400
+                        text-lg sm:text-base
+                    "
+                >
                     <Trans
                         i18nKey="userDashboard:userInfoCard.status"
                         values={{ userStatus: userStatusText }}
@@ -35,7 +73,7 @@ export const UserInfoCard = ({ user }) => {
                     />
                 </p>
 
-                <p className="text-[0.95rem] text-[var(--primary-color)] transition-colors duration-400">
+                <p className="text-base text-center text-[var(--primary-color)] transition-colors duration-400">
                     <Trans
                         i18nKey="userDashboard:userInfoCard.lastLogin"
                         values={{

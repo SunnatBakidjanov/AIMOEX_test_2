@@ -14,14 +14,30 @@ export default function ProfileNav() {
     ];
 
     return (
-        <section className="bg-[var(--primary-transparent)] px-4 py-3 rounded-xl transition-color duration-400">
+        <section
+            className="
+                bg-[var(--primary-transparent)] rounded-xl transition-color duration-400
+                px-4 py-4 sm:py-2
+            "
+        >
             <h2 className="absolute w-px h-px p-0 m-[-1px] overflow-hidden border-0 whitespace-nowrap clip-[rect(0,0,0,0)]">{t('profileNav.title')}</h2>
-            <nav className="flex gap-2 flex-wrap">
+            <nav
+                className="
+                    flex flex-wrap
+                    gap-2
+                    justify-center md:justify-start
+                "
+            >
                 {links.map(link => (
                     <button
                         key={link.path}
                         onClick={() => navigate(link.path)}
-                        className="px-4 py-2 rounded-lg text-[1rem] font-medium tracking-[0.2px] text-[var(--primary-color)] hover:text-[var(--same-white-color)] transition-all duration-400 cursor-pointer hover:bg-[var(--accent-color)]"
+                        className="
+                            rounded-lg font-medium tracking-[0.2px] text-[var(--primary-color)] hover:text-[var(--same-white-color)] transition-all duration-400 cursor-pointer hover:bg-[var(--accent-color)]
+                            border border-[var(--accent-color)] sm:border-none
+                            w-full sm:w-auto
+                            px-4 py-2
+                        "
                     >
                         {link.label}
                     </button>
