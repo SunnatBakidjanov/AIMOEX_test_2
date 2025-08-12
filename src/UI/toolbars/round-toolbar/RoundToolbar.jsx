@@ -1,15 +1,12 @@
 import classNames from 'classnames';
-import React, { useRef } from 'react';
+import React from 'react';
 import styles from './index.module.css';
 import { FaGear } from 'react-icons/fa6';
-import { useRoundToolbar } from './hooks/useRoundToolbar';
 import { useDisabled } from '../../../hooks/useDisabled';
 import { roundToolbarStyles } from './scripts/roundToolbarStyles';
 
-export const RoundToolbar = ({ children, initialDegree, openDegree, radius, openRadius, angleStep, className = {} }) => {
+export const RoundToolbar = ({ children, initialDegree, openDegree, radius, openRadius, angleStep, className = {}, isOpen, toggleToolbar, toolbarRef }) => {
     const tools = React.Children.toArray(children);
-    const toolbarRef = useRef(null);
-    const { isOpen, toggleToolbar } = useRoundToolbar(toolbarRef);
     const { isDisabled, setDisabled } = useDisabled();
     const { toolsClassname, toolsImgClassname } = roundToolbarStyles();
 

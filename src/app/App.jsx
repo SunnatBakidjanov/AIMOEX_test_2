@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import { AppRoutes } from '../routes/AppRoutes';
 import '../styles/index.css';
+import '../i18n/i18n';
 
 import { BrowserRouter } from 'react-router-dom';
 import { store } from '../redux/store';

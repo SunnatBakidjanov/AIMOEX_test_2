@@ -8,9 +8,12 @@
 :root[data-theme='light'] {
     --primary-color: #131313;
     --primary-reverse-color: #f7f7f7;
-    --primary-transparent: rgb(255, 255, 255, 0.65);
+    --primary-transparent: rgb(255, 255, 255, 0.75);
     --accent-color: #4696ff;
     --same-white-color: #f7f7f7;
+    --success-color: #008300;
+    --warning-color: #ffae00;
+    --error-color: #f00;
 }
 
 :root[data-theme='dark'] {
@@ -19,4 +22,7 @@
     --primary-transparent: rgb(0, 0, 0, 0.5);
     --accent-color: #b14fc0;
     --same-white-color: #f7f7f7;
+    --success-color: #008300;
+    --warning-color: #ffae00;
+    --error-color: #f00;
 }

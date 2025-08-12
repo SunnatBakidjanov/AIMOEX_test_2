@@ -3,14 +3,15 @@ import { useDispatch } from 'react-redux';
 import { useDisabled } from '../../../hooks/useDisabled';
 import { changeTheme } from '../../../redux/theme/slice';
 
-export const ChangeThemeBtn = ({ text, children, className }) => {
+export const ChangeThemeBtn = ({ text, children, className, tabIndex = 0 }) => {
     const dispatch = useDispatch();
     const { isDisabled, setDisabled } = useDisabled();
 
     return (
         <button
             type="button"
-            aria-label="text"
+            aria-label="changeThemeBtn"
+            tabIndex={tabIndex}
             className={classNames(className)}
             onClick={() => {
                 setDisabled();

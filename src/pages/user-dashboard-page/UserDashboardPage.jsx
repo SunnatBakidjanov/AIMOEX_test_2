@@ -1,5 +1,4 @@
 import { GradientBackground } from '../../UI/backgrounds/gradient-background/GradientBackground';
-import { ChangeThemeBtn } from '../../UI/buttons/change-theme-btn/ChangeThemeBtn';
 import { MainContainer } from '../../UI/containers/main-container/MainContainer';
 import { PageContainer } from '../../UI/containers/page-container/PageContainer';
 import { UserInfoCard } from '../../UI/user/user-info-card/UserInfoCard';
@@ -12,7 +11,6 @@ export const UserDashboardPage = () => {
         <PageContainer className={'h-screen w-full bg-[var(--primary-reverse-color)] transition-colors duration-400'}>
             <MainContainer className={'relative z-[var(--main-content-z-index)]'}>
                 <main className="flex flex-col gap-y-4 pt-6">
-                    {/* Заголовок */}
                     <UserInfoCard user={user} />
 
                     <ProfileNav />

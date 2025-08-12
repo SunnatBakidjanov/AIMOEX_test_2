@@ -1,8 +1,10 @@
 export const user = {
     id: 'u1',
     name: 'SmaYL',
+    status: 'active',
     avatarUrl: null,
     role: 'Student',
+    lastLogin: new Date(Date.now() - 2 * 60 * 10 * 1000),
 };
 
 export const stats = {

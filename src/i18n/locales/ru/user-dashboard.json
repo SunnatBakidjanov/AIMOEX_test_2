@@ -1,0 +1,12 @@
+{
+    "userInfoCard": {
+        "user": "Привет, <0>{{userName}}</0>",
+        "userStatus": {
+            "active": "Активен",
+            "blocked": "Заблокирован",
+            "inactive": "Неактивен"
+        },
+        "status": "Статус: <0>{{userStatus}}</0>",
+        "lastLogin": "Последний вход: <0>{{userLastLoginDate}}</0>"
+    }
+}

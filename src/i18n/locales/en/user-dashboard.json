@@ -1,3 +1,12 @@
 {
-    "mainTitle": "Hello, "
+    "userInfoCard": {
+        "user": "Hi, <0>{{userName}}</0>",
+        "userStatus": {
+            "active": "Active",
+            "blocked": "Blocked",
+            "inactive": "Inactive"
+        },
+        "status": "Status: <0>{{userStatus}}</0>",
+        "lastLogin": "Last login: <0>{{userLastLoginDate}}</0>"
+    }
 }
