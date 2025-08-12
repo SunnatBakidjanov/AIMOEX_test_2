@@ -1,1 +1,13 @@
 @import 'tailwindcss';
+
+:root[data-theme='light'] {
+    --primary-color: #000;
+    --accent-color: #ff9c2b;
+    --same-white-color: #fff;
+}
+
+:root[data-theme='dark'] {
+    --primary-color: #fff;
+    --accent-color: #b14fc0;
+    --same-white-color: #fff;
+}
