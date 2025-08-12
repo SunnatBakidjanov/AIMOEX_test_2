@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     currentTheme: localStorage.getItem('theme') || 'light',
+    currentColor: localStorage.getItem('color') || '#FF6B6B',
 };
 
 const setThemeAttribute = (attr, value) => {
@@ -46,8 +47,32 @@ const themeSlice = createSlice({
                 }
             }
         },
+        setRandomColor(state) {
+            const colors = [
+                '#FF6B6B', // тёплый красный
+                '#FF8E3C', // оранжевый
+                '#4D96FF', // ярко-синий
+                '#9D4EDD', // фиолетовый
+                '#FF6F91', // розовый
+                '#F9844A', // тыквенно-оранжевый
+            ];
+
+            const now = Date.now();
+            const savedColor = localStorage.getItem('color');
+            const savedTime = localStorage.getItem('colorTimestamp');
+            const hour = 60 * 60 * 1000;
+
+            if (savedColor && savedTime && now - Number(savedTime) < hour) {
+                state.currentColor = savedColor;
+            } else {
+                const newColor = colors[Math.floor(Math.random() * colors.length)];
+                localStorage.setItem('color', newColor);
+                localStorage.setItem('colorTimestamp', String(now));
+                state.currentColor = newColor;
+            }
+        },
     },
 });
 
-export const { changeTheme, setTheme } = themeSlice.actions;
+export const { changeTheme, setTheme, setRandomColor } = themeSlice.actions;
 export default themeSlice;

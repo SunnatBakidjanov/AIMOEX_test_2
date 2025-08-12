@@ -14,7 +14,7 @@ export const RoundToolbar = ({ children, initialDegree, openDegree, radius, open
     const { toolsClassname, toolsImgClassname } = roundToolbarStyles();
 
     return (
-        <div ref={toolbarRef} className={classNames('absolute flex items-center justify-center', className.toolbar)}>
+        <div ref={toolbarRef} className={classNames('fixed flex items-center justify-center', className.toolbar)}>
             {tools.map((tool, idx) => {
                 const angle = initialDegree + idx * angleStep;
                 const openAngle = openDegree + idx * angleStep;

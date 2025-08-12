@@ -1,28 +1,19 @@
+import { GradientBackground } from '../../UI/backgrounds/gradient-background/GradientBackground';
 import { ChangeThemeBtn } from '../../UI/buttons/change-theme-btn/ChangeThemeBtn';
 import { MainContainer } from '../../UI/containers/main-container/MainContainer';
+import { PageContainer } from '../../UI/containers/page-container/PageContainer';
+import { UserInfoCard } from '../../UI/user/user-info-card/UserInfoCard';
 import { user, stats, recentResults } from '../../mocks/mocks';
 import ProfileNav from './UI/profile-nav/ProfileNav';
 import { RoundToolbarUserDashboard } from './UI/round-toolbar/RoundToolbarUserDashboard';
 
 export const UserDashboardPage = () => {
     return (
-        <MainContainer>
-            <main>
-                <div className="max-w-4xl mx-auto p-4 space-y-6">
+        <PageContainer className={'h-screen w-full bg-[var(--primary-reverse-color)] transition-colors duration-400'}>
+            <MainContainer className={'relative z-[var(--main-content-z-index)]'}>
+                <main className="flex flex-col gap-y-4 pt-6">
                     {/* Заголовок */}
-                    <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">
-                        {/* Аватар */}
-                        <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-xl font-bold text-gray-600">{user.name.charAt(0)}</div>
-
-                        {/* Информация */}
-                        <div>
-                            <h1 className="text-2xl font-bold text-gray-800">Привет, {user.name}!</h1>
-                            <p className="text-sm text-gray-500">
-                                Статус: <span className="text-green-600">Активный</span>
-                            </p>
-                            <p className="text-sm text-gray-400">Последний вход: 2 часа назад</p>
-                        </div>
-                    </div>
+                    <UserInfoCard user={user} />
 
                     <ProfileNav />
 
@@ -53,10 +44,12 @@ export const UserDashboardPage = () => {
                             ))}
                         </div>
                     </div>
-                </div>
-            </main>
+                </main>
 
-            <RoundToolbarUserDashboard />
-        </MainContainer>
+                <RoundToolbarUserDashboard />
+            </MainContainer>
+
+            <GradientBackground />
+        </PageContainer>
     );
 };

@@ -14,8 +14,8 @@
     z-index: -1;
     top: 50%;
     left: 50%;
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
     background-color: var(--accent-color);
     border-radius: 100%;
     opacity: 0.7;
@@ -25,7 +25,7 @@
 }
 
 .waveAnimation::after {
-    animation-delay: 0.75s;
+    animation-delay: 1s;
     transform: translate(-50%, -50%) scale(0.9);
 }
 
