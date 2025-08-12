@@ -6,11 +6,11 @@ export default function ProfileNav() {
     const { t } = useTranslation('userDashboard');
 
     const links = [
-        { label: t('profileNav.profile'), path: '/profile' },
-        { label: t('profileNav.lastTests'), path: '/tests' },
-        { label: t('profileNav.results'), path: '/results' },
-        { label: t('profileNav.balansTarif'), path: '/tariff' },
-        { label: t('profileNav.achievements'), path: '/achievements' },
+        { label: t('profileNav.profile'), path: '/user/profile' },
+        { label: t('profileNav.lastTests'), path: '/user/tests' },
+        { label: t('profileNav.results'), path: '/user/results' },
+        { label: t('profileNav.balansTarif'), path: '/user/tariff' },
+        { label: t('profileNav.achievements'), path: '/user/achievements' },
     ];
 
     return (
