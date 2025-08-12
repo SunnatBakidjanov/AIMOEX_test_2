@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next';
+import { userDashBoardStyles } from '../../styles/userDashBoardStyles';
 
 export const ProfileStats = ({ stats }) => {
     const { t } = useTranslation('userDashboard');
+    const { mainContainer, titleSection } = userDashBoardStyles();
 
     const styles = {
         innerContainer: 'shadow-[1px_1px_4px_var(--accent-color)] rounded-xl p-4',
@@ -12,8 +14,8 @@ export const ProfileStats = ({ stats }) => {
     };
 
     return (
-        <section className="flex justify-center bg-[var(--primary-transparent)] items-center flex-col gap-y-2 rounded-xl transition-color duration-400 px-4 py-5">
-            <h2 className="px-2 pb-2 text-[var(--primary-color)] text-[1.75rem] font-medium tracking-[0.3px] w-full text-center transition-colors duration-400">{t('profileStats.title')}</h2>
+        <section className={mainContainer}>
+            <h2 className={titleSection}>{t('profileStats.title')}</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {/* Пройдено тестов */}

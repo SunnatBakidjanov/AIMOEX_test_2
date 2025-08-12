@@ -9,7 +9,7 @@ export const RoundToolbarUserDashboard = () => {
     const { isOpen, toggleToolbar } = useRoundToolbar(toolbarRef);
 
     return (
-        <RoundToolbar initialDegree={200} radius={60} openDegree={140} openRadius={0} angleStep={60} className={{ toolbar: 'bottom-0 right-0 w-[170px] h-[180px]' }} isOpen={isOpen} toggleToolbar={toggleToolbar} toolbarRef={toolbarRef}>
+        <RoundToolbar initialDegree={200} radius={60} openDegree={160} openRadius={0} angleStep={60} className={{ toolbar: 'bottom-0 right-0 p-[60px] pr-[50px]' }} isOpen={isOpen} toggleToolbar={toggleToolbar} toolbarRef={toolbarRef}>
             <ChangeThemeTool isOpen={isOpen} />
             <ChangeLangTool isOpen={isOpen} />
         </RoundToolbar>

@@ -31,7 +31,7 @@ export const RoundToolbar = ({ children, initialDegree, openDegree, radius, open
             })}
 
             <button
-                className={classNames(isOpen ? '' : styles.waveAnimation, toolsClassname)}
+                className={classNames('flex items-center justify-between', isOpen ? '' : styles.waveAnimation, toolsClassname)}
                 onClick={() => {
                     toggleToolbar();
                     setDisabled();

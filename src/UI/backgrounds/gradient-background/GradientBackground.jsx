@@ -5,7 +5,7 @@ import styles from './index.module.css';
 export const GradientBackground = () => {
     const theme = useSelector(state => state.theme.currentTheme);
 
-    const rootClassName = 'fixed z-[var(--bg-z-index)] rounded-full inset-0 blur-[350px] overflow-hidden';
+    const rootClassName = 'fixed min-h-screen z-[var(--bg-z-index)] rounded-full inset-0 blur-[350px] overflow-hidden';
 
     return (
         <>
