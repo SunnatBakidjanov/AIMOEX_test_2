@@ -18,7 +18,7 @@ export const UserDashboardPage = () => {
                         flex flex-col
                         gap-y-2 sm:gap-y-4
                         pt-4 sm:pt-6
-                        pb-8 sm:pb-10 md:pb-12 lg:pb-14
+                        pb-14
                     "
                 >
                     <Title />
